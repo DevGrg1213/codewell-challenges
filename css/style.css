@@ -1,0 +1,281 @@
+:root {
+  --background-color: #e3eff969;
+  --primary-color: #353252;
+  --color-black: #000;
+  --color-white: #fff;
+  --text-color: #7a7979;
+  --text--long-btn: #c7bce2;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+.background {
+  display: none;
+}
+body {
+  background-color: var(--background-color);
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 200;
+  position: relative;
+}
+.header {
+  max-width: 114rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+nav {
+  position: relative;
+  margin-top: 5rem;
+}
+.logo {
+  padding-top: 2rem;
+  height: 6rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.hamburger {
+  display: none;
+}
+.menu {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.menu__item {
+  margin-top: 2rem;
+  margin-right: 1.5rem;
+}
+.menu__item a {
+  font-size: 1.6rem;
+  color: var(--text-color);
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.menu__item a:hover {
+  transform: translateY(-2px);
+}
+.menu__item a:active {
+  transform: translateY(1px);
+}
+.btn,
+.btn:link,
+.btn:visited {
+  color: var(--color-white);
+  display: inline-block;
+  border-radius: 5px;
+  padding: 1.5rem;
+  text-decoration: none;
+  transition: all 0.3s;
+  font-size: 1.7rem;
+  font-weight: 600;
+  background-color: var(--primary-color);
+  transition: transform 0.3s;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+}
+.btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+}
+.long-btn {
+  display: inline-block;
+  border-radius: 2rem;
+  font-size: 1.3rem;
+  color: var(--text--long-btn);
+  padding: 0.5rem 2rem;
+  background-color: var(--primary-color);
+  font-weight: 400;
+}
+.long-btn a {
+  color: var(--text--long-btn);
+  font-weight: 700;
+  display: inline-block;
+}
+.banner {
+  margin-top: 7rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.heading-primary {
+  margin-top: 2rem;
+  font-size: 4rem;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+.content {
+  font-size: 1.4rem;
+  color: var(--text-color);
+  font-weight: 400;
+  line-height: 1.7;
+}
+.form {
+  margin-top: 1rem;
+}
+input[type="email"] {
+  padding: 1.5rem;
+  outline: none;
+  width: 50%;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+  border: 1px solid #eee;
+}
+::placeholder {
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #d1cece;
+}
+.right {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.banner-img {
+  height: 30rem;
+}
+.footer {
+  max-width: 114rem;
+  margin: 0 auto;
+  margin-top: 6rem;
+}
+.heading-tertiary {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+.companies {
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+}
+.company__logo {
+  height: 4rem;
+}
+
+@media only screen and (max-width: 1140px) {
+  .nav {
+    margin-top: 0rem;
+  }
+  .header,
+  .footer {
+    padding: 2rem;
+  }
+  .logo {
+    padding-top: 1rem;
+    height: 5rem;
+  }
+}
+
+/* for tablet view */
+
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 8px;
+  }
+  .header {
+    margin: 3rem;
+  }
+  .menu {
+    display: none;
+  }
+  .menu.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .menu__item a {
+    z-index: 1500;
+    color: var(--color-white);
+  }
+  .menu .btn {
+    background-color: transparent;
+  }
+  .nav {
+    height: 4rem;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+  }
+  .logo {
+    padding-top: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3rem;
+  }
+  .logo.open {
+    display: none;
+  }
+  .hamburger {
+    z-index: 1500;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 2rem;
+    display: block;
+    cursor: pointer;
+  }
+  .banner {
+    margin-top: 1rem;
+  }
+  .left {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+  .banner {
+    display: block;
+  }
+  .heading-primary {
+    font-size: 5rem;
+  }
+
+  .right {
+    display: none;
+  }
+  .footer {
+    margin: 0 4rem;
+    margin-bottom: 3rem;
+  }
+}
+.background.open {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  transition: all 0.3s;
+  height: 100vh;
+  width: 100%;
+  background-color: #3f3f3f;
+}
+
+/* for mobile */
+@media only screen and (max-width: 320px) {
+  .header,
+  .footer {
+    margin: 0;
+  }
+  .long-btn {
+    margin-left: 0;
+    font-size: 1.5rem;
+  }
+  .heading-primary {
+    font-size: 3rem;
+  }
+}
